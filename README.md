@@ -7,7 +7,7 @@ Verkkopeliyhdistys Insomnia ry - Identity Bot
 
 ### Build Image
 
-`podman build -t ghcr.io/insomniafi/insid-bot`
+`podman build -t ghcr.io/insomniafi/insid-bot .`
 
 ### Publish Image
 `podman push ghcr.io/insomniafi/insid-bot`
@@ -16,5 +16,9 @@ Verkkopeliyhdistys Insomnia ry - Identity Bot
 
 `podman run --name insid-bot -d -e DISCORD_TOKEN= ghcr.io/insomniafi/insid-bot`
 
+### Run Container (Dev Mode)
+
+`podman run --name insid-bot -it -e DISCORD_TOKEN= ghcr.io/insomniafi/insid-bot npm run start:dev`
+
 ### Update Dependencies
-`podman run --name insid-bot -d -e DISCORD_TOKEN= -v "$PWD":/usr/src/app/ ghcr.io/insomniafi/insid-bot`
+`podman run --rm --name insid-bot -it -e DISCORD_TOKEN= -v "$PWD":/usr/src/app/ ghcr.io/insomniafi/insid-bot npm update`
