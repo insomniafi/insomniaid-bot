@@ -1,0 +1,22 @@
+name: TypeScript Build
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, assigned, edited, ready_for_review]
+  push:
+  workflow_dispatch:
+
+jobs:
+  tsc:
+    name: TypeScript Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: install node v22
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+    - name: npm install
+      run: npm install
+    - name: tsc
+      uses: icrawl/action-tsc@v1
