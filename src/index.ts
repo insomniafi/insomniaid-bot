@@ -1,5 +1,11 @@
 import { Client as DiscordClient, Collection, IntentsBitField } from "discord.js";
 
+console.log('InsID-Bot ' + process.env.npm_package_version);
+console.log('Verkkopeliyhdistys Insomnia ry - Identity Bot');
+console.log('(c)2024 Verkkopeliyhdistys Insomnia ry & Warén Group');
+console.log('');
+
+console.log('[Bot] Starting');
 
 process.on('SIGINT', () => {
     process.exit();
@@ -17,7 +23,7 @@ process.on('uncaughtException', (error) => {
 });
 
 process.on('exit', () => {
-
+    console.log('[Bot] Stopping');
 });
 
 process.on('warning', (warning) => {
