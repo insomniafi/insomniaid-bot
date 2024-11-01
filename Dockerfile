@@ -1,5 +1,7 @@
 FROM docker.io/node:22-alpine
 
+LABEL org.opencontainers.image.source https://github.com/insomniafi/insid-bot
+
 #Dependencies
 RUN apk add --virtual .build-deps python3 make g++ gcc git
 
