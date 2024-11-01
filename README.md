@@ -7,7 +7,7 @@ Verkkopeliyhdistys Insomnia ry - Identity Bot
 
 ### Build Image
 
-`podman build -t ghcr.io/insomniafi/insid-bot . --no-cache`
+`podman build -t ghcr.io/insomniafi/insid-bot . --format docker --no-cache`
 
 ### Publish Image
 `podman push ghcr.io/insomniafi/insid-bot`
