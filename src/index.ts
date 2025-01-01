@@ -3,7 +3,7 @@ import logger from "./functions/logger"
 
 console.log('InsID-Bot ' + process.env.npm_package_version);
 console.log('Verkkopeliyhdistys Insomnia ry - Identity Bot');
-console.log('(c)2024 Verkkopeliyhdistys Insomnia ry & Warén Group');
+console.log('(c)2024-2025 Verkkopeliyhdistys Insomnia ry & Warén Group');
 console.log('');
 
 logger('Bot', 'Starting');
